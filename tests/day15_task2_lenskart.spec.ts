@@ -1,17 +1,19 @@
-import { test, expect } from '@playwright/test';
+import {test} from "@playwright/test"
 
-test('Search and select Bengaluru in LensKart Store Locator', async ({ page }) => {
-  await page.goto('https://www.lenskart.com', { timeout: 30000 });
+test("Locate Bangalore in Store Locator", async({page}) => {
 
+    await page.goto("https://www.lenskart.com/", { waitUntil: "domcontentloaded" })
 
-  const storeLocator = page.locator('//a[text()="StoreLocator"]');
-  await storeLocator.click();
+    test.setTimeout(60000)
+    
+    await page.locator("//a[@id='lrd9']").hover()
+    // await page.getByText("Store Locator").hover()
 
-  await page.locator('//input[@placeholder="Search your city or area"]').fill('Bangalore');
-  
+    await page.getByText("Locate a Store").click()
 
-  await page.locator('//li[contains(text(),"Bengaluru, Karnataka, India")]').click();
- 
-  // await expect(page).toHaveURL(/bengaluru/i);
-  await page.screenshot({ path: '' });
-});
+    await page.getByPlaceholder("Search by State/Pincode/Locality").fill("Bangalore")
+
+    await page.locator("//div[text()='Bangalore, Karnataka, India']").click()
+    // await page.screenshot({path: " "})
+    // await page.keyboard.press("Enter")  
+})
