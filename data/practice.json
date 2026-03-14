@@ -1,0 +1,32 @@
+{
+    "students": [
+      {
+        "firstName": "Akshita",
+        "lastName": "Jain",
+        "email": "akshitajain@gmail.com",
+        "gender": "Female",
+        "mobile":"9461933114",
+        "dob": "20 Nov 2003",
+        "subjects": "Computer Science",
+        "hobbies": ["Music"],
+        "picture": "C:/Capgemini assesment/image/Profile.png",
+        "address": "Vinayak Tower(VT), Jagatpura",
+        "state": "Rajasthan",
+        "city": "Jaipur"
+      },
+      {
+        "firstName": "Bhavika",
+        "lastName": "Heda",
+        "email": "bhavikaheda@gmail.com",
+        "gender": "Female",
+        "mobile": "8875380932",
+        "dob": "22 Jan 2001",
+        "subjects": "Physics",
+        "hobbies": ["Reading"],
+        "picture": "C:/Capgemini assesment/image/Profile.png",
+        "address": "Raja Park",
+        "state": "Rajasthan",
+        "city": "Jaipur"
+      }
+    ]
+  }
